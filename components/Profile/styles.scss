@@ -1,0 +1,52 @@
+.container {
+  grid-area: Purse;
+  //font-size: 2rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: #232323;
+
+  display: grid;
+  grid-template-columns: 5rem 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+      "profile fame click-dmg"
+      "profile gold auto-dmg";
+
+  .fa {
+    margin-right: 0.5rem;
+  }
+
+  .profile {
+    grid-area: profile;
+    font-size: 3rem;
+  }
+
+  .fame {
+    grid-area: fame;
+
+    .faFame {
+      color: #00a99e;
+    }
+  }
+  .gold {
+    grid-area: gold;
+
+    .faRing {
+      color: #d9e021;
+    }
+  }
+  .clickDmg {
+    grid-area: click-dmg;
+
+    .faHand {
+      color: red;
+    }
+  }
+  .autoDmg {
+    grid-area: auto-dmg;
+
+    .faClock {
+      color: orange;
+    }
+  }
+}

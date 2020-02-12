@@ -1,0 +1,75 @@
+.container {
+  color: #fff;
+}
+
+.tier {
+  display: grid;
+  align-content: space-between;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px;
+}
+
+.skill {
+  width: 80px;
+  height: 80px;
+  border: 1px solid darkgray;
+  background-color: lightgray;
+  color: darkgray;
+  border-radius: 5px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  
+  .levelIndicator {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    border: 1px solid darkgray;
+  }
+
+  &.purchased {
+    color: black;
+    border-color: black;
+    cursor: pointer;
+
+    .levelIndicator {
+      border-color: black;
+    }
+  }
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+  display: grid;
+  grid-template-rows: 20px 1fr 20px;
+
+  &.active {
+    border-color: #fff;
+    box-shadow: 0 10px 20px rgba(#fff,0.19), 0 6px 6px rgba(#fff,0.23);
+  }
+
+  .purchaseLink {
+    background-color: white;
+    text-decoration: none;
+    border: 1px solid rgb(148, 126, 0);
+    color: gold;
+    border-radius: 1rem;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.2rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: gold;
+      color: black;
+    }
+  }
+
+  .skillProgress {
+    padding: 0 5px;
+    text-align: center;
+    display: grid;
+    font-size: 0.7rem;
+    grid-template-columns: 1rem 1fr;
+  }
+}

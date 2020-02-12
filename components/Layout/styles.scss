@@ -1,0 +1,22 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    width: calc(100%);
+    height: 100%;
+    background-image: linear-gradient(#85f8ff, #b6fbff);
+    background-position: cover;
+    border: 1px solid #121212;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5rem 1fr;
+    grid-gap: 2rem;
+    grid-template-areas:
+            "Purse blank"
+            "Character Arena";
+}

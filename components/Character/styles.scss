@@ -1,0 +1,41 @@
+.container {
+  grid-area: Character;
+  //background-color: rgb(35,85,88);
+  margin: 0.5rem;
+  //box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.tabContainer {
+  width: 100%;
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 1rem;
+  padding: 0;
+
+
+  li {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    width: 25%;
+    background-color: #444;
+    color: #eee;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-bottom-color: #222;
+    height: 100%;
+
+    &.activeTab {
+      background-image: linear-gradient(#232323, #232323);
+      color: #fff;
+      border-color: #222 #222 #232323;
+    }
+  }
+}
+
+.tabContentContainer {
+
+}
