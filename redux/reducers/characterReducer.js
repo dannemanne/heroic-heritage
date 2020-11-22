@@ -47,6 +47,9 @@ export default registerReducer(initialState, {
   },
 
   [IDLE_OPPONENT]: ({ fame, inventory, skillProficiencies, activeSkills }, { dps, duration, opponent }) => {
+    if (!opponent)
+      return {};
+      
     const killDuration = opponent.maxHealth / dps;
     const cycleDuration = killDuration + KILL_ANIME_DURATION;
     
