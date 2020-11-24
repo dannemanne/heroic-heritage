@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 import * as allOpponents from '../redux/opponents';
 
@@ -20,7 +20,7 @@ export function useAnimationFrame(callback) {
   const callbackRef = useRef(callback);
   const timestampRef = useRef(null);
 
-  useLayoutEffect(
+  useEffect(
     () => {
       callbackRef.current = callback;
     },
@@ -39,7 +39,7 @@ export function useAnimationFrame(callback) {
   };
 
   const frameRef = useRef();
-  useLayoutEffect(() => {
+  useEffect(() => {
     frameRef.current = requestAnimationFrame(
       loop
     );
